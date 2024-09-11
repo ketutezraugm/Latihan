@@ -1,0 +1,93 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // variables
+    int a[2][2];
+    int b[2][2];
+
+    // inputs matrix a
+    cout << "Matrix a (2x2)"  << endl;
+    for (int i = 0; i < 2; i++) 
+    {
+        for (int j = 0; j < 2; j++) 
+        {
+            cout << "Enter value of a[" << i << "][" << j << "]: ";
+            cin >> a[i][j];
+        }
+    }
+
+    // inputs matrix b
+    cout << "\nMatrix b (2x2)" << endl;
+    for (int i = 0; i < 2; i++) 
+    {
+        for (int j = 0; j < 2; j++) 
+        {
+            cout << "Enter value of b[" << i << "][" << j << "]: ";
+            cin >> b[i][j];
+        }
+    }
+
+    // display matrix a
+    cout << "\nMatrix a :" << endl;
+    for (int i = 0; i < 2; i++) 
+    {
+        for (int j = 0; j < 2; j++) 
+        {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
+    // display matrix b
+    cout << "\nMatrix b :" << endl;
+    for (int i = 0; i < 2; i++) 
+    {
+        for (int j = 0; j < 2; j++) 
+        {
+            cout << b[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    // b = a + b
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) 
+        {
+            b[i][j] = a[i][j] + b[i][j];
+        }
+    }
+
+    // b = a - b
+    for (int i = 0; i < 2; i++) 
+    {
+        for (int j = 0; j < 2; j++) 
+        {
+            a[i][j] = b[i][j] - a[i][j];
+        }
+    }
+
+    // output b
+    cout << "\nb = a + b :" << endl;
+    for (int i = 0; i < 2; i++) 
+    {
+        for (int j = 0; j < 2; j++) 
+        {
+            cout << b[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
+    // output a
+    cout << "\na = b - a:" << endl;
+    for (int i = 0; i < 2; i++) 
+    {
+        for (int j = 0; j < 2; j++) 
+        {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
